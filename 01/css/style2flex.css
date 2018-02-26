@@ -1,0 +1,116 @@
+/*Глобальные настройки*/
+body {
+  margin: 0;
+  font-family: sans-serif;
+  color: black;
+  background: #999;
+}
+
+/*Хеадер страницы, эксперименты с флексбоксами*/
+header {
+  background: crimson;
+}
+.container {
+  padding: 10px;
+  width: 1024px;
+  margin: auto;
+}
+
+.navbar {
+  margin-left: auto;
+}
+
+.flex {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+  background: pink;
+}
+
+.navbar ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  font-size: 0;
+}
+.navbar li {
+  display: inline-block;
+  background: blue;
+  font-size: 16px;
+}
+
+ .navbar a {
+  text-decoration: none;
+  color: white;
+  display: block;
+  padding: 10px 20px;
+}
+
+.navbar a:hover {
+  background: navy;
+}
+
+/*Мейн сайта. Эксперименты со спрайтами*/
+main {
+  background: grey;
+  /*min-height: 500px;*/
+  width: 1024px;
+}
+
+.display-icon {
+  font-size: 0;
+}
+
+.social {
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  font-size: 0;
+  width: 120px;
+  height: 120px;
+  background: coral;
+}
+
+.social:hover {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.social::before {
+  content: "";
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-image: url("../images/icons/social-icons.png");
+  background-repeat: no-repeat;
+  position: absolute;
+}
+
+.vk::before {
+  background-position: -540px -60px;
+  height: 128px;
+  width: 128px;
+}
+
+.fb::before {
+  background-position: -60px -60px;
+  height: 128px;
+  width: 128px;
+}
+
+.twitter::before {
+  background-position: -180px -60px;
+  height: 128px;
+  width: 128px;
+}
+
+.instagram::before {
+  background-position: -420px -60px;
+  height: 128px;
+  width: 128px;
+}
+
+.google::before {
+  background-position: -300px -60px;
+  height: 128px;
+  width: 128px;
+}

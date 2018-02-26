@@ -1,0 +1,672 @@
+/*Глобальные стили, настройки, классы*/
+body {
+  padding: 0;
+  margin: 0;
+  /*font-family: Arial, sans-serif;*/
+  font-family: Gilroy-Extrabold;
+  /*font-family: Opensans;*/
+}
+
+.flexbox {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+/*Ссылки хедера*/
+header h1 {
+  /*margin: 20px 0 0 58px;*/
+  /*padding: 2px;*/
+  font-size: 40px;
+  position: relative;
+  left: 58px;
+  top: -5px;
+}
+
+header a {
+  color: black;
+}
+
+header a:hover, header button:hover {
+  opacity: 0.5;
+}
+
+header a:active, header button:active {
+  opacity: 0.3;
+}
+
+.search a {
+  margin-left: 16px;
+  opacity: 0.2;
+}
+
+.search a::after {
+  content: ""
+}
+
+.search a:active, .icon:hover {opacity: 1;}
+
+a {
+  text-decoration: none;
+}
+
+/*Хеадер*/
+header {
+  background: url('../images/headerback.png');
+  width: 1160px;
+  height: 318px;
+  margin: auto;
+  position: relative;
+}
+
+/*Верхнее меню*/
+.upmenu {
+  padding: 30px 0 45px 0;
+}
+
+.upmenu ul li {
+  display: inline-block;
+  font-size: 0.8em;
+}
+
+.upmenu a {
+  padding: 5px;
+}
+
+/*Основная навигация. Позиционирование*/
+.navbar ul li {
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+}
+
+header ul {
+  padding: 0 60px;
+  margin: 0;
+}
+
+.catalog {
+  position: relative;
+}
+
+.catalog::after {
+  content: "+";
+  position: absolute;
+  right: -20px;
+  top: -5px;
+  font-size: 24px;
+  color: #666;
+}
+
+.delivery {
+  position: absolute;
+  margin: 0 0 0 540px;
+}
+
+.delivery button {
+  margin-left: 16px;
+  border: none;
+  background: transparent;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.active {
+  cursor: default;
+}
+.active::after, .active-footer::after {
+  position: absolute;
+  content: "";
+  height: 5px;
+  bottom: -90px;
+  left: 0;
+  right: 5px;
+  background: white;
+}
+
+.guarantee {
+  position: absolute;
+  margin: 0 0 0 700px;
+}
+
+.flex-right {
+  margin-left: auto;
+}
+
+.compare {
+  position: absolute;
+  margin: 0 0 0 840px;
+}
+
+/*Меню при наведении на каталог товаров*/
+.catalog-menu {
+  font-family: Opensans, Arial, sans-serif;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: #ffe27f;
+  width: 100%;
+  min-height: 130px;
+  z-index: 3;
+  display: none;
+}
+
+.catalog-menu li {
+  list-style-type: none;
+  padding: 0 0 22px 0;
+  font-size: 0.8em;
+}
+
+/*Мейн сайта начинается здесь :)*/
+main, .container {
+  width: 1160px;
+  margin: auto;
+  position: relative;
+}
+
+/*Слайдеры*/
+.slide1, .slide2, .slide3 {
+  position: absolute;
+  top: -590px;
+}
+
+/*.slide1 {display: none;}*/
+
+.slide2 {display: none;}
+
+.slide3 {display: none;}
+
+.slide-image {
+  width: 580px;
+  text-align: center;
+}
+
+.description {
+  width: 520px;
+  padding-left: 20px;
+}
+
+.description strong {
+  position: relative;
+  z-index: 2;
+  display: block;
+  font-size: 3em;
+  margin-top: 80px;
+}
+
+.description span {
+  font-size: 2em;
+  font-family: Opensans, Arial, sans-serif;
+}
+
+.description p {
+  margin-bottom: 0;
+  font-family: Opensans, Arial, sans-serif;
+  width: 500px;
+}
+
+.one-string-slide {
+  position: relative;
+  text-align: center;
+}
+
+.one-string-slide a {
+  margin: 60px 0;
+  font-family: Gilroy-Extrabold, Arial, sans-serif;
+  letter-spacing: 0.2em;
+}
+
+.character {
+  width: 160px;
+}
+
+.fire-police {
+  position: absolute;
+  font-size: 8.5em;
+  color: white;
+  top: 0;
+  right: 0;
+  font-weight: bold;
+  z-index: 1;
+}
+
+/*Популярное, блок*/
+.popular-block {
+  position: relative;
+  margin-top: 480px;
+}
+
+.popimage {margin: auto;}
+
+.popimage-mono {
+  margin: auto;
+  margin-bottom: 0;
+}
+
+.popback {
+    width: 160px;
+    height: 160px;
+    background: #fbf8d5;
+}
+
+.popular-block a {color: black;}
+
+.popback:active {opacity: 0.5;}
+
+.popback:hover {background: #f7f3aa;}
+
+.popular-block p {width: 160px;}
+
+/*Блок сервис. Доставка, гарантии и кредит*/
+.services-block {margin-top: 160px;}
+
+/*Меню-список в блоке сервисов*/
+.services-menu ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.services-menu li {
+  text-align: center;
+  font-size: 18px;
+  position: relative;
+  width: 160px;
+  height: 40px;
+  margin: 0;
+}
+
+.services-menu li::after {
+  content: "";
+  position: relative;
+  top: -24px;
+  z-index: 1;
+  display: block;
+  height: 10px;
+  background: #f6f2a9;
+}
+
+.services-menu a {
+  position: relative;
+  display: block;
+  z-index: 2;
+  width: 120px;
+  height: 20px;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  color: black;
+  letter-spacing: 0.2em;
+}
+
+.services-menu a:hover {
+  background: #f0c52e;
+}
+
+.services-menu a:active {
+  background: black;
+  padding: 10px 140px 10px 20px;
+  color: #f7e184;
+}
+
+/*Тексты с заголовком и картинки из менюшки сервиса*/
+.services-slide {
+  width: 700px;
+  margin-left: 240px;
+  position: relative;
+}
+
+/*.delivery-block {display: none;}*/
+
+.warranty-block {display: none;}
+
+.credit-block {display: none;}
+
+.services-text h3 {
+  padding: 0;
+  font-size: 2em;
+  margin: 0;
+}
+
+.services-text {
+  width: 425px;
+  padding-right: 10px;
+}
+
+.services-text p {
+  font-family: Opensans, Arial, sans-serif;
+  font-size: 0.9em;
+}
+
+/*Бягущий мужик, мужчина с холодильником и прочая лабуда*/
+.services-png {margin-right: 80px;}
+
+/*Логотипчики всякие*/
+.logo-block {margin-top: 100px;}
+
+.logotypes {opacity: 0.2;}
+
+.logotypes:hover {opacity: 1;}
+
+/*Собственно, контакты, господа!*/
+.about-us {
+  width: 460px;
+  position: relative;
+}
+
+.about-us ul {
+  list-style-type: none;
+  margin-top: 80px;
+}
+
+.about-us li {margin-bottom: 25px;}
+
+.about-us h4, .contacts h4 {
+  font-size: 2em;
+}
+
+.about-us p, .contacts p {
+  font-family: Opensans, Arial, sans-serif;
+  font-size: 0.9em;
+  margin-bottom: 40px;
+}
+
+.contacts {
+  width: 560px;
+  position: relative;
+}
+
+.contact-block {
+  margin: 60px 0 210px 0;
+}
+
+.contact-block h4 {
+  padding: 0;
+  margin: 0 0 50px 0;
+}
+
+.map-jpg {cursor: pointer;}
+
+/*Ссылки под контактами, гореть бы им в аду*/
+.one-string {
+  position: absolute;
+  left: 0;
+  bottom: -80px;
+  width: 260px;
+  text-align: center;
+}
+
+.one-string a, .one-string-slide a {
+  z-index: 2;
+  position: relative;
+  padding: 10px 20px;
+  display: inline-block;
+  width: 220px;
+  text-transform: uppercase;
+  color: black;
+  font-size: 17px;
+  font-weight: bold;
+  letter-spacing: 0.2em;
+}
+
+.one-string-slide a {width: 180px;}
+
+.one-string a:hover, .one-string-slide a:hover {
+  background: #f0c42e;
+}
+
+.one-string a:active, .one-string-slide a:active {
+  background: #f0c52e;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.one-string::after, .one-string-slide::after {
+  content: "";
+  height: 8px;
+  width: 100%;
+  display: block;
+  background: #f6f3aa;
+  position: absolute;
+  top: 16px;
+  z-index: 1;
+}
+
+.one-string-slide::after {
+  top: 24px;
+}
+
+/*Ах да, футер, он же подвал*/
+footer {
+  background: #555;
+}
+
+/*Первая колонка футера*/
+.first-column-footer {
+  width: 200px;
+  font-size: 0.8em;
+  color: white;
+}
+
+.first-column-footer span {
+  font-family: Opensans, Arial, sans-serif;
+}
+
+.device-footer {
+  font-size: 40px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #f0c52e;
+  margin: 60px 0 30px 0;
+  display: inline-block;
+  position: relative;
+}
+
+.device-footer:hover {
+  color: #f7e184;
+}
+
+.device-footer:active {
+  opacity: 0.3;
+}
+
+.active-footer {position: relative;}
+
+.active-footer::after {right: 120px;}
+
+/*Вторая колонка футера*/
+.second-column-footer {
+  width: 440px;
+  text-align: center;
+  position: relative;
+  margin-left: 160px;
+}
+
+.second-column-footer ul li {
+  display: inline-block;
+  text-transform: uppercase;
+}
+
+.second-column-footer ul {
+  padding: 0;
+  margin: 140px 0 60px 0;
+}
+
+.second-column-footer li>a {
+  padding: 5px;
+  color: white;
+  letter-spacing: 0.2em;
+}
+
+.second-column-footer li>a:hover, .icon:hover {opacity: 0.5;}
+
+.second-column-footer li>a:active, .icon:active {opacity: 0.2}
+
+/*Иконочки соцсетей*/
+.social {
+  width: 160px;
+  margin: auto;
+}
+
+.social-icon {
+  position: relative;
+  font-size: 0;
+  width: 40px;
+  height: 40px;
+  margin-bottom: 60px;
+}
+
+/*Кусочек, посвященный спрайтам на всей странице*/
+.social-icon::after, .icon::after, .icon-header::after {
+  content: "";
+  background-image: url('../images/icons/dev-sprite.png');
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.icon::after, .icon-header::after {
+  top: 14px;
+  left: -8px;
+}
+/*Конец кусочка*/
+
+/*Продолжение иконочек соцсетей*/
+.fb::after, .twitt::after, .inst::after {
+  width: 40px;
+  height: 40px;
+  opacity: 0.5;
+}
+
+.fb:hover::after, .twitt:hover::after, .inst:hover::after {opacity: 1;}
+
+.fb:active::after, .twitt:active::after, .inst:active::after {opacity: 0.2;}
+
+.fb::after {background-position: -40px -40px;}
+
+.twitt::after {background-position: -40px -80px;}
+
+.inst::after {background-position: -40px 0;}
+
+/*Третья колонка футера*/
+.third-column-footer ul li {
+  display: inline-block;
+  font-size: 0.8em;
+}
+
+.third-column-footer ul {margin: 70px 0 35px 0;}
+
+.third-column-footer ul>li {
+  margin-left: 35px;
+}
+
+.third-column-footer a {
+  padding: 5px;
+  color: white;
+}
+
+.icon, .icon-header {
+  position: relative;
+  font-family: Opensans, Arial, sans-serif;
+}
+
+.login-but::after, .compare-but::after, .basket-but::after, .search-but::after {
+  width: 16px;
+  height: 16px;
+  /*background: red;*/
+}
+
+.search-but::after {background-position: -1px -10px;}
+
+.login-but::after {background-position: -18px -46px;}
+
+.compare-but::after {background-position: -17px -7px;}
+
+.basket-but::after {background-position: -18px -26px;}
+
+.telephone {
+  display: block;
+  text-align: right;
+  font-family: Opensans, Arial;
+  color: white;
+}
+
+.html-academy {
+  display: block;
+  margin: 70px 0 0 300px;
+}
+
+.html-academy:active {
+  opacity: 0.5;
+}
+
+/*Окошкo попапа*/
+.write-us-popup {
+  display: none;
+  width: 760px;
+  min-height: 370px;
+  padding: 90px 100px;
+  background: coral;
+  position: fixed;
+  z-index: 5;
+  left: 50%;
+  margin-left: -480px;
+  top: 15px;
+}
+
+.popup-first-column input, .popup-second-column input {
+  width: 360px;
+  height: 50px;
+  border: none;
+  font-size: 16px;
+}
+
+.letter-text {
+  width: 760px;
+  min-height: 155px;
+  border: none;
+  vertical-align: top;
+  font-size: 16px;
+  resize: none;
+}
+
+.write-us-popup span {
+  display: block;
+}
+
+.popup-first-column, .popup-second-column {
+  width: 360px;
+  margin-bottom: 30px;
+}
+
+/*Оверлей*/
+.overlay {
+  display: none;
+  width: 100px;
+  height: 100px;
+  background: rgba(0,0,0,0.5);
+  /*background: indianred;*/
+  position: fixed;
+  z-index: 4;
+  top: 0;
+  left: 0;
+}
+
+/*Шрифты*/
+@font-face {
+  font-family: 'Gilroy-Extrabold';
+  src: url('../fonts/gilroyextrabold.woff2');
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Opensans';
+  src: url('../fonts/opensans.woff2');
+  font-style: normal;
+  font-weight: normal;
+}
