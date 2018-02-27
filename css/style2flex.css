@@ -80,8 +80,7 @@ main {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-image: url("../images/icons/social-icons.png");
-  background-repeat: no-repeat;
+  background: url("../images/icons/social-icons.png") no-repeat;
   position: absolute;
 }
 
