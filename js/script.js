@@ -16,14 +16,14 @@ link.addEventListener('click', function(event) {
   } else {
     login.focus();
   }
-})
+});
 
 // Закрытие модального окна по кнопке
 close.addEventListener('click', function(event) {
   event.preventDefault();
   popup.classList.remove('popup-show');
   popup.classList.remove('modal-error');
-})
+});
 
 // Проверка ввода логин/пароль и запись в локальное хранилище
 form.addEventListener('submit', function() {
@@ -34,7 +34,7 @@ form.addEventListener('submit', function() {
   } else {
     localStorage.setItem('login', login.value);
   }
-})
+});
 
 // Закрываем модальное окно по Esc
 window.addEventListener('keydown', function(event) {
@@ -44,4 +44,4 @@ window.addEventListener('keydown', function(event) {
       popup.classList.remove('modal-error');
     }
   }
-})
+});
