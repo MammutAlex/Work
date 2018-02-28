@@ -207,9 +207,13 @@ main, .container {
   margin-bottom: 0;
   font-family: Opensans, Arial, sans-serif;
   width: 160px;
+  font-size: 0.7em;
 }
 
-.description>p {width: 500px;}
+.description>p {
+  width: 500px;
+  font-size: 1em;
+}
 
 .one-string-slide {
   position: relative;
@@ -628,7 +632,7 @@ footer {
   width: 760px;
   min-height: 370px;
   padding: 90px 100px;
-  background: coral;
+  background: #f6f2a9;
   position: fixed;
   z-index: 5;
   left: 50%;
@@ -673,6 +677,8 @@ footer {
   top: 0;
   left: 0;
 }
+
+.modal-content-show {display: block;}
 
 /*Шрифты*/
 @font-face {

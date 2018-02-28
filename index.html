@@ -15,7 +15,7 @@
           <a href="#" class="icon-header search-but">Поиск по сайту</a>
         </li>
         <li class="delivery">
-          <button type="button" class="icon-header login-but">Войти</button>
+          <a href="#" class="icon-header login-but">Войти</a>
         </li>
         <li class="compare">
           <a href="#" class="icon-header compare-but">Сравнить</a>
@@ -247,6 +247,34 @@
           <a href="#">Напишите нам</a>
         </span>
       </div>
+    </section>
+    <section class="write-us-popup">
+      <form class="" action="index.html" method="post">
+        <div class="popup-top-row flexbox">
+          <div class="popup-first-column">
+            <span class="popup-span">Ваше имя</span>
+            <input  type="text"
+                    name="login"
+                    placeholder="  Представьтесь пожалуйста"/>
+          </div>
+          <div class="popup-second-column flex-right">
+            <span class="popup-span">Ваш email</span>
+            <input  type="email"
+                    name="mail"
+                    placeholder="  Для отправки ответа"/>
+          </div>
+        </div>
+        <div class="popup-bottom-row">
+          <span class="popup-span">Текст письма</span>
+          <textarea type="text"
+                    name="letter"
+                    placeholder="  В свободной форме"
+                    class="letter-text"></textarea>
+          <input    type="submit"
+                    name="send"
+                    value="Отправить"/>
+        </div>
+      </form>
     </section>
     <div class="overlay"></div>
   </main>
