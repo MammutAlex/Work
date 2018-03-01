@@ -12,6 +12,12 @@ var buttonOnSlide31 = document.querySelector('.but-slide-3-1');
 var buttonOnSlide32 = document.querySelector('.but-slide-3-2');
 var butMenuCatalog = document.querySelector('.catalog');
 var catalogMenu = document.querySelector('.catalog-menu');
+var servicesMenuDelivery = document.querySelector('.services-menu01');
+var servicesMenuWarranty = document.querySelector('.services-menu02');
+var servicesMenuCredit = document.querySelector('.services-menu03');
+var servicesSlideDelivery = document.querySelector('.delivery-block');
+var servicesSlideWarranty = document.querySelector('.warranty-block');
+var servicesSlideCredit = document.querySelector('.credit-block');
 
 // Окно при нажатии на кнопку "Login"
 link.addEventListener('click', function (event) {
@@ -101,4 +107,26 @@ butMenuCatalog.addEventListener('mouseout', function (event) {
     event.preventDefault();
     catalogMenu.classList.add('modal-content-hide');
     catalogMenu.classList.remove('modal-content-show');
+});
+
+// Переключение слайдов 2
+servicesMenuDelivery.addEventListener('click', function (event) {
+    event.preventDefault();
+    servicesSlideDelivery.classList.remove('slide-hide');
+    servicesSlideWarranty.classList.add('slide-hide');
+    servicesSlideCredit.classList.add('slide-hide');
+});
+
+servicesMenuWarranty.addEventListener('click', function (event) {
+    event.preventDefault();
+    servicesSlideWarranty.classList.remove('slide-hide');
+    servicesSlideDelivery.classList.add('slide-hide');
+    servicesSlideCredit.classList.add('slide-hide');
+});
+
+servicesMenuCredit.addEventListener('click', function (event) {
+    event.preventDefault();
+    servicesSlideCredit.classList.remove('slide-hide');
+    servicesSlideWarranty.classList.add('slide-hide');
+    servicesSlideDelivery.classList.add('slide-hide');
 });
