@@ -81,9 +81,12 @@ header {
 
 /*Основная навигация. Позиционирование*/
 .navbar ul li {
-    display: inline-block;
     text-transform: uppercase;
     letter-spacing: 0.2em;
+}
+
+.menu-property > li {
+    display: inline-block;
 }
 
 header ul {
@@ -95,18 +98,29 @@ header ul {
     position: relative;
 }
 
+.catalog a {
+    padding-bottom: 20px;
+}
+
 .catalog::after {
     content: "+";
+    font-family: Arial, sans-serif;
+    font-weight: lighter;
     position: absolute;
-    right: -20px;
-    top: -5px;
-    font-size: 24px;
+    right: -35px;
+    top: -8px;
+    font-size: 30px;
     color: #666;
 }
 
 .delivery {
     position: absolute;
     margin: 0 0 0 540px;
+}
+
+.login-but-delivery {
+    position: absolute;
+    margin: 0 0 0 552px;
 }
 
 .delivery button {
@@ -149,14 +163,23 @@ header ul {
 .catalog-menu {
     font-family: Opensans, Arial, sans-serif;
     position: absolute;
-    bottom: 0;
-    left: 0;
+    top: 30px;
+    left: -60px;
     background: #ffe27f;
-    width: 100%;
-    min-height: 130px;
+    width: 1160px;
+    min-height: 125px;
     z-index: 3;
     visibility: hidden;
+    font-size: 0.8em;
+    letter-spacing: normal;
 }
+
+.catalog-menu ul {
+    width: 240px;
+    padding: 0;
+}
+
+.first-ul-menu {margin-left: 60px;}
 
 .catalog-menu li {
     list-style-type: none;
@@ -714,7 +737,7 @@ footer {
     width: 760px;
     min-height: 370px;
     padding: 90px 100px;
-    background: #f6f2a9;
+    background: white;
     position: fixed;
     z-index: 5;
     left: 50%;
@@ -727,6 +750,7 @@ footer {
     height: 50px;
     border: none;
     font-size: 16px;
+    background: #f3f3f3;
 }
 
 .letter-text {
@@ -736,6 +760,7 @@ footer {
     vertical-align: top;
     font-size: 16px;
     resize: none;
+    background: #f3f3f3;
 }
 
 .write-us-popup span {
@@ -745,6 +770,50 @@ footer {
 .popup-first-column, .popup-second-column {
     width: 360px;
     margin-bottom: 30px;
+}
+
+.popup-submit {
+    margin-top: 40px;
+    position: relative;
+    width: 200px;
+}
+
+.popup-submit::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 7px;
+    background: #f0c42e;
+    left: 0;
+    top: 15px;
+    z-index: 1;
+}
+
+.popup-submit input {
+    border: none;
+    background: transparent;
+    width: 200px;
+    position: absolute;
+    z-index: 2;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    cursor: pointer;
+    padding: 10px 0;
+}
+
+.popup-submit input:hover {
+    background: #f0c52e;
+}
+
+.close-button {
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    font-size: 30px;
+    transform: rotate(45deg);
+    padding: 3px 12px;
+    cursor: pointer;
 }
 
 /*Оверлей*/

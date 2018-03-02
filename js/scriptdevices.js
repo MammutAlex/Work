@@ -1,5 +1,7 @@
 var link = document.querySelector('.login-but');
+var link2 = document.querySelector('.login-but-js');
 var popupLogin = document.querySelector('.write-us-popup');
+var closeButton = document.querySelector('.close-button');
 var overlay = document.querySelector('.overlay');
 var slide01 = document.querySelector('.slide1');
 var slide02 = document.querySelector('.slide2');
@@ -26,8 +28,20 @@ link.addEventListener('click', function (event) {
     overlay.classList.add('modal-content-show');
 });
 
+link2.addEventListener('click', function (event) {
+    event.preventDefault();
+    popupLogin.classList.add('modal-content-show');
+    overlay.classList.add('modal-content-show');
+});
+
+// Закрытие окна входа
 overlay.addEventListener('click', function (event) {
     event.preventDefault();
+    overlay.classList.remove('modal-content-show');
+    popupLogin.classList.remove('modal-content-show');
+});
+
+closeButton.addEventListener('click', function () {
     overlay.classList.remove('modal-content-show');
     popupLogin.classList.remove('modal-content-show');
 });
