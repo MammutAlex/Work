@@ -10,11 +10,17 @@
 <header>
     <h1 class="logo"><a href="#" class="condition">DEVICE</a></h1>
     <section class="upmenu">
-        <ul class="flexbox">
-            <li class="search">
-                <a href="#" class="icon-header search-but">Поиск по сайту</a>
+        <ul class="flex-start">
+            <li class="search icon-header">
+                <a href="#" class="search-link">Поиск по сайту</a>
+                <form method="post">
+                    <div class="search-block slide-hide">
+                        <input type="text" name="search" class="input-search"/>
+                        <button class="">Найти</button>
+                    </div>
+                </form>
             </li>
-            <li class="login-but-delivery">
+            <li class="login-but">
                 <a href="#" class="icon-header login-but">Войти</a>
             </li>
             <li class="compare">
@@ -26,9 +32,9 @@
         </ul>
     </section>
     <nav class="navbar">
-        <ul class=" flexbox menu-property">
-            <li class="catalog"><a href="#">Каталог товаров</a>
-                <section class="catalog-menu flexbox">
+        <ul class=" flex-start menu-property">
+            <li class="catalog"><a href="#" class="catalog-link">Каталог товаров</a>
+                <section class="catalog-menu flex-start">
                     <ul class="first-ul-menu">
                         <li><a href="#">Виртуальная реальность</a></li>
                         <li><a href="#">Моноподы для селфи</a></li>
@@ -43,14 +49,14 @@
                     </ul>
                 </section>
             </li>
-            <li class="delivery active"><a>Доставка</a></li>
-            <li class="guarantee"><a href="#">Гарантия</a></li>
-            <li class="flex-right"><a href="#">Контакты</a></li>
+            <li class="delivery active"><a href="#delivery">Доставка</a></li>
+            <li class="guarantee"><a href="#guarantee">Гарантия</a></li>
+            <li class="flex-right"><a href="#contacts">Контакты</a></li>
         </ul>
     </nav>
 </header>
 <main>
-    <section class="slide1 flexbox modal-content-show">
+    <section class="slide1 flex-start modal-content-show">
         <div class="slide-image">
             <img src="images/slide1.png" alt="">
         </div>
@@ -64,7 +70,7 @@
             <button class="but-slide-1-1 slide-button slide-but-one slide-active"></button>
             <button class="but-slide-1-2 slide-button"></button>
             <button class="but-slide-1-3 slide-button"></button>
-            <div class="descript-charact flexbox">
+            <div class="descript-charact flex-start">
                 <div class="character"><span>8,5 м</span>
                     <p>Длина палки</p></div>
                 <div class="character"><span>5 кг</span>
@@ -77,7 +83,7 @@
             </div>
         </div>
     </section>
-    <section class="slide2 flexbox modal-content-hide">
+    <section class="slide2 flex-start modal-content-hide">
         <div class="slide-image">
             <img src="images/slide2.png" alt="">
         </div>
@@ -91,7 +97,7 @@
             <button class="but-slide-2-1 slide-button slide-but-one"></button>
             <button class="but-slide-2-2 slide-button slide-active"></button>
             <button class="but-slide-2-3 slide-button"></button>
-            <div class="descript-charact flexbox">
+            <div class="descript-charact flex-start">
                 <div class="character"><span>48 часов</span>
                     <p>Без подзарядки</p></div>
             </div>
@@ -100,7 +106,7 @@
             </div>
         </div>
     </section>
-    <section class="slide3 flexbox modal-content-hide">
+    <section class="slide3 flex-start modal-content-hide">
         <div class="slide-image slide-image3">
             <img src="images/slide3.png" alt="">
         </div>
@@ -114,7 +120,7 @@
             <button class="but-slide-3-1 slide-button slide-but-one"></button>
             <button class="but-slide-3-2 slide-button"></button>
             <button class="but-slide-3-3 slide-button slide-active"></button>
-            <div class="descript-charact flexbox">
+            <div class="descript-charact flex-start">
                 <div class="character"><span>800 м</span>
                     <p>Дальность полета</p></div>
                 <div class="character"><span>50 м</span>
@@ -163,7 +169,8 @@
             <p>Квадрокоптеры</p>
         </a>
     </section>
-    <section class="services-block flexbox">
+    <a name="guarantee"></a><a name="delivery"></a>
+    <section class="services-block flex-start">
         <section class="services-menu">
             <ul>
                 <li><a href="#" class="services-menu01">Доставка</a></li>
@@ -171,7 +178,7 @@
                 <li><a href="#" class="services-menu03">Кредит</a></li>
             </ul>
         </section>
-        <section class="delivery-block services-slide flexbox">
+        <section class="delivery-block services-slide flex-start">
             <div class="services-text">
                 <h3>Доставка</h3>
                 <p>
@@ -185,7 +192,7 @@
                  width="136"
                  height="164">
         </section>
-        <section class="warranty-block services-slide flexbox slide-hide">
+        <section class="warranty-block services-slide flex-start slide-hide">
             <div class="services-text">
                 <h3>Гарантия</h3>
                 <p>
@@ -199,7 +206,7 @@
                  width=""
                  height="">
         </section>
-        <section class="credit-block services-slide flexbox slide-hide">
+        <section class="credit-block services-slide flex-start slide-hide">
             <div class="services-text">
                 <h3>Кредит</h3>
                 <p>
@@ -221,6 +228,7 @@
         <a href="#"><img src="images/go-pro.png" alt="go-pro" class="logotypes"></a>
         <a href="#"><img src="images/vive.png" alt="vive" class="logotypes"></a>
     </section>
+    <a name="contacts"></a>
     <section class="contact-block flex-between">
         <div class="about-us">
             <h4>О нас</h4>
@@ -257,7 +265,7 @@
     </section>
     <section class="write-us-popup">
         <form class="" action="index.html" method="post">
-            <div class="popup-top-row flexbox">
+            <div class="popup-top-row flex-start">
                 <div class="popup-first-column">
                     <span class="popup-span">Ваше имя</span>
                     <input type="text"
@@ -279,8 +287,8 @@
                           class="letter-text"></textarea>
                 <span class="popup-submit">
                     <input type="submit"
-                       name="send"
-                       value="Отправить"/>
+                           name="send"
+                           value="Отправить"/>
                 </span>
             </div>
             <span class="close-button">+</span>
@@ -289,7 +297,7 @@
     <div class="overlay"></div>
 </main>
 <footer>
-    <div class="container flexbox">
+    <div class="container flex-start">
         <section class="first-column-footer">
             <div class="active-footer">
                 <a href="#" class="device-footer">Device</a>

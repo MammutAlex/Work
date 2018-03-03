@@ -1,13 +1,13 @@
-/*Глобальные стили, настройки, классы*/
+/*Global settings*/
 body {
-    padding: 0;
+    padding: 41px 0 0 0;
     margin: 0;
-    /*font-family: Arial, sans-serif;*/
-    font-family: Gilroy-Extrabold, serif;
-    /*font-family: Opensans;*/
+    font-family: Gilroy-Extrabold, sans-serif;
 }
 
-.flexbox {
+a {text-decoration: none;}
+
+.flex-start {
     display: flex;
     justify-content: flex-start;
 }
@@ -17,57 +17,62 @@ body {
     justify-content: space-between;
 }
 
-/*Ссылки хедера*/
-header h1 {
-    /*margin: 20px 0 0 58px;*/
-    /*padding: 2px;*/
-    font-size: 40px;
-    position: relative;
-    left: 58px;
-    top: -5px;
-}
-
-header a {
-    color: black;
-}
-
-header a:hover, header button:hover {
-    opacity: 0.5;
-}
-
-header a:active, header button:active {
-    opacity: 0.3;
-}
-
-.search a {
-    margin-left: 16px;
-    opacity: 0.2;
-}
-
-.search a::after {
-    content: ""
-}
-
-.search a:active, .icon:hover {
-    opacity: 1;
-}
-
-a {
-    text-decoration: none;
-}
-
-/*Хеадер*/
+.flex-right {margin-left: auto;}
+/*End of global settings*/
+/*---------------------------------------------------------------------------*/
+/*Header*/
 header {
-    background: url('../images/headerback.png');
     width: 1160px;
-    height: 318px;
+    height: 298px;
     margin: auto;
     position: relative;
 }
 
-/*Верхнее меню*/
+header::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+    background: #f7e296;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    z-index: -1;
+}
+
+/*Header links*/
+h1 {
+    font-size: 48px;
+    position: absolute;
+    left: 58px;
+    top: -60px;
+    font-family: Gilroy-Extrabold, Arial, sans-serif;
+}
+
+header a {color: black;}
+
+header a:hover {opacity: 0.5;}
+
+header a:active {opacity: 0.3;}
+
+/*Sprites general settings*/
+.social-icon::after, .icon::after, .icon-header::after {
+    content: "";
+    background: url('../images/icons/dev-sprite.png') no-repeat;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.icon::after, .icon-header::after {left: -8px;}
+/*End of the general customization of sprites*/
+/*---------------------------------------------------------------------------*/
+/*Up-menu (search, login, compare, basket)*/
 .upmenu {
-    padding: 30px 0 45px 0;
+    padding: 50px 0 50px 0;
 }
 
 .upmenu ul li {
@@ -75,103 +80,129 @@ header {
     font-size: 0.8em;
 }
 
-.upmenu a {
-    padding: 5px;
+.upmenu a {padding: 5px;}
+
+.search {
+    margin-left: 16px;
+    width: 540px;
 }
 
-/*Основная навигация. Позиционирование*/
-.navbar ul li {
-    text-transform: uppercase;
-    letter-spacing: 0.2em;
+.search-link {
+    margin-left: 16px;
+    cursor: text;
 }
 
-.menu-property > li {
+.search a {opacity: 0.2;}
+
+.search a:active, .icon:hover {opacity: 1;}
+
+.search::after {background-position: -1px -10px;}
+
+.login-but {
+    position: relative;
+    width: 280px;
+}
+
+/*Pop-up search box*/
+.search-block {
+    position: absolute;
+    top: -15px;
+    left: 16px;
+}
+
+.search-block::after {
+    content: '';
+    position: absolute;
+    display: block;
+    height: 2px;
+    width: 440px;
+    bottom: 0;
+    left: -32px;
+    background: black;
+}
+
+.input-search {
     display: inline-block;
+    border: none;
+    background: transparent;
+    width: 320px;
+    height: 42px;
+    outline: transparent;
 }
 
+.search-block button {
+    background: black;
+    border: 2px solid black;
+    height: 46px;
+    width: 85px;
+    cursor: pointer;
+    font-family: Opensans, Arial, sans-serif;
+}
+
+.search-block button:hover {color: white;}
+
+.search-block button:active {color: gray;}
+/*End of pop-up search box*/
+
+.login-but::after {background-position: -18px -46px;}
+
+.compare {
+    position: relative;
+    width: 100px;
+}
+
+.compare-but::after {background-position: -17px -7px;}
+
+.basket-but::after {background-position: -18px -26px;}
+
+.login-but::after, .compare-but::after, .basket-but::after, .search::after {
+    width: 16px;
+    height: 16px;
+}
+/*End of up-menu*/
+/*---------------------------------------------------------------------------*/
+/*Main menu*/
 header ul {
     padding: 0 60px;
     margin: 0;
 }
 
-.catalog {
-    position: relative;
+.navbar li {
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-size: 18px;
 }
 
-.catalog a {
-    padding-bottom: 20px;
+.menu-property > li {display: inline-block;}
+
+.catalog {
+    position: relative;
+    width: 540px;
 }
 
 .catalog::after {
     content: "+";
-    font-family: Arial, sans-serif;
+    font-family: Opensans-Light, sans-serif;
     font-weight: lighter;
     position: absolute;
-    right: -35px;
+    right: 285px;
     top: -8px;
     font-size: 30px;
     color: #666;
 }
 
-.delivery {
-    position: absolute;
-    margin: 0 0 0 540px;
-}
-
-.login-but-delivery {
-    position: absolute;
-    margin: 0 0 0 552px;
-}
-
-.delivery button {
-    margin-left: 16px;
-    border: none;
-    background: transparent;
-    padding: 5px;
-    cursor: pointer;
-}
-
-.active {
-    cursor: default;
-}
-
-.active::after, .active-footer::after {
-    position: absolute;
-    content: "";
-    height: 5px;
-    bottom: -90px;
-    left: 0;
-    right: 5px;
-    background: white;
-}
-
-.guarantee {
-    position: absolute;
-    margin: 0 0 0 700px;
-}
-
-.flex-right {
-    margin-left: auto;
-}
-
-.compare {
-    position: absolute;
-    margin: 0 0 0 840px;
-}
-
-/*Меню при наведении на каталог товаров*/
+/*Catalog pop-up menu*/
 .catalog-menu {
     font-family: Opensans, Arial, sans-serif;
-    position: absolute;
-    top: 30px;
+    position: relative;
+    bottom: -35px;
     left: -60px;
     background: #ffe27f;
     width: 1160px;
-    min-height: 125px;
+    min-height: 129px;
     z-index: 3;
     visibility: hidden;
     font-size: 0.8em;
-    letter-spacing: normal;
 }
 
 .catalog-menu ul {
@@ -185,6 +216,29 @@ header ul {
     list-style-type: none;
     padding: 0 0 22px 0;
     font-size: 0.8em;
+    letter-spacing: normal;
+    text-transform: none;
+}
+/*End of catalog pop-up menu*/
+
+.delivery {
+    position: relative;
+    width: 160px;
+}
+
+.active::after, .active-footer::after {
+    position: absolute;
+    content: "";
+    height: 5px;
+    bottom: -90px;
+    left: 0;
+    right: 60px;
+    background: white;
+}
+
+.guarantee {
+    position: relative;
+    width: 160px;
 }
 
 /*Мейн сайта начинается здесь :)*/
@@ -337,8 +391,9 @@ main, .container {
 
 /*Блок сервис. Доставка, гарантии и кредит*/
 .services-block {
-    margin-top: 160px;
+    margin-top: 130px;
     min-height: 195px;
+    padding-top: 30px;
 }
 
 /*Меню-список в блоке сервисов*/
@@ -625,23 +680,6 @@ footer {
     margin-bottom: 60px;
 }
 
-/*Кусочек, посвященный спрайтам на всей странице*/
-.social-icon::after, .icon::after, .icon-header::after {
-    content: "";
-    background: url('../images/icons/dev-sprite.png') no-repeat;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.icon::after, .icon-header::after {
-    top: 14px;
-    left: -8px;
-}
-
-/*Конец кусочка*/
-
 /*Продолжение иконочек соцсетей*/
 .fb::after, .twitt::after, .inst::after {
     width: 40px;
@@ -691,28 +729,6 @@ footer {
 .icon, .icon-header {
     position: relative;
     font-family: Opensans, Arial, sans-serif;
-}
-
-.login-but::after, .compare-but::after, .basket-but::after, .search-but::after {
-    width: 16px;
-    height: 16px;
-    /*background: red;*/
-}
-
-.search-but::after {
-    background-position: -1px -10px;
-}
-
-.login-but::after {
-    background-position: -18px -46px;
-}
-
-.compare-but::after {
-    background-position: -17px -7px;
-}
-
-.basket-but::after {
-    background-position: -18px -26px;
 }
 
 .telephone {
@@ -852,6 +868,20 @@ footer {
 @font-face {
     font-family: 'Opensans';
     src: url('../fonts/opensans.woff2');
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Opensans-Light';
+    src: url('../fonts/opensanslight.woff2');
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('../fonts/gilroylight.woff2');
     font-style: normal;
     font-weight: normal;
 }
