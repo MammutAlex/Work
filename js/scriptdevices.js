@@ -153,7 +153,7 @@ servicesMenuCredit.addEventListener('click', function (event) {
 
 // Pop-up search box
 searchButton.addEventListener('click', function (event) {
-    event.preventDefault();
+    event.stopPropagation();
     searchBlock.classList.remove('slide-hide');
     searchLink.classList.add('modal-content-hide');
     searchField.focus();
@@ -164,4 +164,8 @@ window.addEventListener('keydown', function (event) {
         searchBlock.classList.add('slide-hide');
         searchLink.classList.remove('modal-content-hide');
     }
+});
+window.addEventListener('mouseup', function (event) {
+    searchBlock.classList.add('slide-hide');
+    searchLink.classList.remove('modal-content-hide');
 });
