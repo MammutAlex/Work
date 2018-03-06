@@ -180,6 +180,10 @@ header ul {
     width: 540px;
 }
 
+.catalog-link {
+    padding-bottom: 40px;
+}
+
 .catalog::after {
     content: "+";
     font-family: Opensans-Light, sans-serif;
@@ -767,6 +771,7 @@ footer {
     border: none;
     font-size: 16px;
     background: #f3f3f3;
+    padding: 5px 10px;
 }
 
 .letter-text {
@@ -777,6 +782,7 @@ footer {
     font-size: 16px;
     resize: none;
     background: #f3f3f3;
+    padding: 5px 10px;
 }
 
 .write-us-popup span {

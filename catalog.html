@@ -1,20 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Catalog</title>
+    <meta charset="utf-8">
+    <title>Devices</title>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<header class="header-catalog">
+<header>
     <h1 class="logo"><a href="#" class="condition">DEVICE</a></h1>
     <section class="upmenu">
-        <ul class="flexbox">
-            <li class="search">
-                <a href="#" class="icon-header search-but">Поиск по сайту</a>
+        <ul class="flex-start">
+            <li class="search icon-header">
+                <a href="#" class="search-link">Поиск по сайту</a>
+                <form method="post">
+                    <div class="search-block slide-hide">
+                        <input type="text" name="search" class="input-search"/>
+                        <button class="">Найти</button>
+                    </div>
+                </form>
             </li>
-            <li class="login-but-delivery">
+            <li class="login-but">
                 <a href="#" class="icon-header login-but">Войти</a>
             </li>
             <li class="compare">
@@ -26,9 +32,9 @@
         </ul>
     </section>
     <nav class="navbar">
-        <ul class=" flexbox menu-property">
-            <li class="catalog"><a href="#">Каталог товаров</a>
-                <section class="catalog-menu flexbox">
+        <ul class=" flex-start menu-property">
+            <li class="catalog"><a href="#" class="catalog-link">Каталог товаров</a>
+                <section class="catalog-menu flex-start">
                     <ul class="first-ul-menu">
                         <li><a href="#">Виртуальная реальность</a></li>
                         <li><a href="#">Моноподы для селфи</a></li>
@@ -43,11 +49,12 @@
                     </ul>
                 </section>
             </li>
-            <li class="delivery active"><a>Доставка</a></li>
+            <li class="delivery active"><a href="#delivery">Доставка</a></li>
             <li class="guarantee"><a href="#guarantee">Гарантия</a></li>
             <li class="flex-right"><a href="#contacts">Контакты</a></li>
         </ul>
     </nav>
 </header>
+<script src="js/scriptdevices.js" type="text/javascript"></script>
 </body>
 </html>
